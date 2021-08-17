@@ -6,6 +6,9 @@ The goal of this project is to create a solution that crawls for articles from t
 
 hello my name is Khalil LAATIRIS, i'm 23 years old,Currently student in secende year master degree in Big Data && Cloud Computing.
 
+Greate thanks to gemographie hiring team to set this type of project.
+I enjoyed coding this project because it use all news technologie for me wherever i am using python and mongoDB. i learned about rest API well, and get familier with scrapy framework for the first time.
+
 ## project content 
 
 * Crawling data 
@@ -41,11 +44,17 @@ the scrapy framework print the data crawled in the console, and  to redirect the
 the collection and mongoDB database information are declared in [settings file](./articleCollection/settings.py).
 ---
 ## Get data by API
-in this project we use the default API of MongoDB Realm  
+in this project we use the default API of `MongoDB Realm` in `3rd party service` and he code used is in the [file](./Code-mongoDB-API.js).
 
+in our [web page](./index.html) we use the function fetch to get the data
 
+## Bonus
+the web page offer a search button on look up for a specific article in database ,
+it send a request with option to serch by headline or subject, date_time and author are not desponible for the now !!
 
+## Issues
+there is articles doesn't have some field because of speciale source of them. and we find `null` in these field.
 
+# Contact
 
-
-crawling data from [the Guardians web site ](https://www.theguardian.com/) 
+khalil.laatiris@gmail.com
