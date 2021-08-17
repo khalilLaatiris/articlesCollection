@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+    <title>Acticle Document</title>
+</head>
+<body>
+		<!-- Here a loader is created which 
+             loads till response comes -->
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" 
+                 role="status" id="loading">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+       
+		<form action="#" name="search_form">
+			<div class="container mt-5">
+				<div class="row d-flex justify-content-center">
+					<select class="form-select" aria-label="Default select example" id="select-value">
+					  <option value="headline" selected>Headline</option>
+					  <option value="subject">Subject</option>
+					  <option value="date_time" disabled>date</option>
+					  <option value="date_time" disabled>author</option>
+					  <!-- date time is disable because we extracte the data in string format in scraping step -->
+					</select>
+					<div class="col-md-6"> <input type="text" id="keyword-value" class="form-control" placeholder="Enter search keyword"></div>
+					<div class="col-md-3"> <button class="btn btn-secondary btn-block" onclick="search()">Search Results</button> </div>
+				</div>
+			</div>
+		</form>
+        <h1 align="center">news acticles</h1>
+        <br>
+        <!-- table for showing data -->
+        <table id="Articles"></table>
+</body>
+</html>
