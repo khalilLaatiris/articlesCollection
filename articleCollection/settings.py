@@ -88,6 +88,8 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 #ITEM_PIPELINES = ['Article.pipelines.MongoDBPipeline', ]
 
+## mongoDB parametre to distant connection
+
 MONGODB_SERVER = "mongodb://mouna:11223344556677889900@clusterkhalil-shard-00-00.xzm8f.mongodb.net:27017,clusterkhalil-shard-00-01.xzm8f.mongodb.net:27017,clusterkhalil-shard-00-02.xzm8f.mongodb.net:27017/ArticleCollection?ssl=true&replicaSet=atlas-nl2dsv-shard-0&authSource=admin&retryWrites=true&w=majority"
 MONGODB_PORT = 27017
 MONGODB_DB = "ArticleCollection"

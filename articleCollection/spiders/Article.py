@@ -1,6 +1,8 @@
 from scrapy import Spider
 from articleCollection.items import ArticlecollectionItem
 
+# this class indicate how the data will be gotten from the guardians website
+
 class ActicleSpider(Spider):
     name = "Article"
     allowed_domains = ["theguardian.com"]
