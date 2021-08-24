@@ -20,9 +20,9 @@ class ActicleSpider(Spider):
     	#get information from every article in the web site the guardiens 
     	item=ArticlecollectionItem()
 
-    	item['headline']=response.css('article div > h1::text').get()
+    	item['headline']=response.css('article h1::text').get()
     	item['link']=response.request.url
-    	item['author']=response.css('article address a::text').get()
+    	item['author']=response.css('a[@rel=author]::text').get()
     	item['text']='\n'.join(response.css('article main div p::text').getall())
     	item['image']=response.css('article picture img::attr(src)').get()
     	item['subject']=response.css('article div a > span::text').get()
