@@ -24,12 +24,13 @@ class ArticlecollectionPipeline:
         # process_item function is used for inserting data to our mongoDB Atlas database 
         # we use a test if some article is missing the function wil raise an error and will not insert data in database
     def process_item(self, item, spider):
+        valid=True
         for data in item:
             if not data:
+                valid=False
                 raise DropItem("Missing {0}!".format(data))
-            else:
-                if not self.collection.find(dict(data)): # id the data is valid and doesn't exist in the collected articles
-                    self.collection.insert(dict(data))
+        if valid:
+            self.collection.insert(dict(item))
         return item
 
 
