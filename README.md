@@ -55,6 +55,11 @@ it send a request with option to serch by headline or subject, date_time and aut
 ## Issues
 there is articles doesn't have some field because of speciale source of them. and we find `null` in these field.
 
+# Automation of crawling
+I am using windows as operation system i created a planified task to execute it every day at 17:00 on my local computer. 
+the commende used is : `schtasks /create /tn My App /tr c:\apps\myapp.exe /sc daily /st 08:00 /ed 31/12/2021`
+for crawling data i create a [bat file](./start_articles_crawling.bat) that activate the working virtual envirenment and start crawling data.
+
 # Contact
 
 khalil.laatiris@gmail.com
